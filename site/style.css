@@ -1,0 +1,159 @@
+:root {
+  --bg: #ffffff;
+  --fg: #1f1f1f;
+  --muted: #5c5c5c;
+  --link: #1f1f1f;
+  --rule: #d9d9d9;
+  --code-bg: #f3f3f3;
+  --mono: Inconsolata, ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  --sans: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #2d2d2d;
+    --fg: #ffffff;
+    --muted: #b3b3b3;
+    --link: #ffffff;
+    --rule: #4a4a4a;
+    --code-bg: #232323;
+  }
+}
+
+/* The landing page is a handful of links; it keeps the epheo.eu look regardless of theme. */
+body.landing {
+  --bg: #2d2d2d;
+  --fg: #ffffff;
+  --muted: #b3b3b3;
+  --link: #ffffff;
+  --rule: #4a4a4a;
+  --code-bg: #232323;
+  font-family: var(--mono);
+}
+
+html {
+  background: var(--bg);
+}
+
+body {
+  margin: 0 auto;
+  padding: 0 16px 48px;
+  max-width: 44rem;
+  background: var(--bg);
+  color: var(--fg);
+  font-family: var(--sans);
+  font-size: 17px;
+  line-height: 1.55;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--mono);
+  line-height: 1.25;
+  margin: 1.6em 0 0.5em;
+}
+
+h1 { font-size: 1.8em; margin-top: 1.2em; }
+h2 { font-size: 1.4em; border-bottom: 1px solid var(--rule); padding-bottom: 0.2em; }
+h3 { font-size: 1.15em; }
+h4 { font-size: 1em; }
+
+p, ul, ol, blockquote { margin: 0 0 1em; }
+
+a, a:visited { color: var(--link); text-decoration: underline; }
+a:hover { text-decoration: none; }
+
+.landing header p, .landing main p, .landing footer p { margin: 0 0 0.6em 0; }
+.landing .subtitle, .landing .status, .landing footer { color: var(--muted); }
+.landing nav p { margin: 0 0 0.3em 10px; }
+.landing a, .landing a:visited { text-decoration: none; }
+.landing a:hover { text-decoration: underline; }
+.landing footer { margin-top: 2.5em; }
+
+code, pre, kbd, samp {
+  font-family: var(--mono);
+  font-size: 0.92em;
+}
+
+code {
+  background: var(--code-bg);
+  padding: 0.1em 0.3em;
+  border-radius: 3px;
+}
+
+pre {
+  background: var(--code-bg);
+  padding: 0.8em 1em;
+  border-radius: 4px;
+  overflow-x: auto;
+  line-height: 1.4;
+  margin: 0 0 1.2em;
+}
+
+pre code {
+  background: none;
+  padding: 0;
+  font-size: inherit;
+}
+
+blockquote {
+  border-left: 3px solid var(--rule);
+  padding-left: 1em;
+  color: var(--muted);
+}
+
+hr {
+  border: 0;
+  border-top: 1px solid var(--rule);
+  margin: 2em 0;
+}
+
+.table-wrap {
+  overflow-x: auto;
+  margin: 0 0 1.2em;
+}
+
+table {
+  border-collapse: collapse;
+  font-size: 0.92em;
+  min-width: 100%;
+}
+
+th, td {
+  border: 1px solid var(--rule);
+  padding: 0.4em 0.6em;
+  text-align: left;
+  vertical-align: top;
+}
+
+th { background: var(--code-bg); }
+
+#TOC {
+  margin: 1em 0 2em;
+  padding: 0.8em 1em;
+  border: 1px solid var(--rule);
+  border-radius: 4px;
+  font-size: 0.95em;
+}
+
+#TOC ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+#TOC ul ul { padding-left: 1.2em; }
+
+#TOC li { margin: 0.15em 0; }
+
+#TOC a, #TOC a:visited { text-decoration: none; }
+#TOC a:hover { text-decoration: underline; }
+
+.spec-nav {
+  font-family: var(--mono);
+  font-size: 0.9em;
+  color: var(--muted);
+  margin: 1em 0 0;
+}
+
+.spec-nav a, .spec-nav a:visited { text-decoration: none; }
+.spec-nav a:hover { text-decoration: underline; }
