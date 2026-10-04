@@ -22,5 +22,5 @@ make image   # build the container locally
 
 ## Publish
 
-Push to `main`. GitHub Actions builds the image and pushes `quay.io/epheo/def-ms:latest`.
+Push to `main`. GitHub Actions builds the image and pushes `ghcr.io/epheo/def-ms:latest`.
 ArgoCD in the defms cluster runs that image and serves it at def.ms.
