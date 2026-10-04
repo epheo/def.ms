@@ -24,3 +24,7 @@ make image   # build the container locally
 
 Push to `main`. GitHub Actions builds the image and pushes `ghcr.io/epheo/def-ms:latest`.
 ArgoCD in the defms cluster runs that image and serves it at def.ms.
+
+## License
+
+Apache License 2.0, for the specification text and everything else in this repository. See `LICENSE`.
